@@ -1,0 +1,26 @@
+/**
+  * Responsive breakpoint mixin.
+  * Parameter class can be : xs, sm, md, lg
+  */
+
+@mixin responsive($class) {
+  @if $class == xs {
+    @media (max-width: $responsive-xs-max-width) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: $responsive-xs-max-width + 1px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: $responsive-md-min-width) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: $responsive-lg-min-width) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint mixin supports: xs, sm, md, lg';
+  }
+}
