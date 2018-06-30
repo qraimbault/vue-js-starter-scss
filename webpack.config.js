@@ -1,91 +1,108 @@
-const { VueLoaderPlugin } = require('vue-loader');
-const path = require('path');
+const { VueLoaderPlugin } = require("vue-loader");
+const path = require("path");
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const env = process.env.NODE_ENV;
-const sourceMap = env === 'development';
-const minify = env === 'production';
+const env = "development";
+const sourceMap = env === "development";
+const minify = env === "production";
 
 const config = {
-  entry: path.join(__dirname, 'src', 'main.js'),
+  entry: path.join(__dirname, "src", "main.js"),
   mode: env,
   output: {
-    publicPath: '',
+    publicPath: ""
   },
   optimization: {
     splitChunks: {
-      chunks: 'all',
-    },
+      chunks: "all"
+    }
   },
-  devtool: sourceMap ? 'cheap-module-eval-source-map' : undefined,
+  devtool: sourceMap ? "cheap-module-eval-source-map" : undefined,
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: "vue-loader"
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [path.join(__dirname, 'src')],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap,
-            },
-          },
-        ],
+        loader: "babel-loader",
+        include: [path.join(__dirname, "src")]
       },
       {
         test: /\.scss$/,
+        loader:
+          "vue-style-loader!css-loader!resolve-url-loader!sass-loader?sourceMap"
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|ico)$/,
         use: [
-          'vue-style-loader',
-          'css-loader',
-          'sass-loader'
+          {
+            loader: "url-loader",
+            options: {
+              limit: 1, // Convert images < 8kb to base64 strings
+              name: "images/[hash]-[name].[ext]"
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[ext]"
+            }
+          }
         ]
       }
-    ],
+    ]
   },
   plugins: [
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      filename: path.join(__dirname, 'dist', 'index.html'),
-      template: path.join(__dirname, 'static', 'index.html'),
+      filename: path.join(__dirname, "dist", "index.html"),
+      template: path.join(__dirname, "static", "index.html"),
       inject: true,
-      minify: minify ? {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true,
-      } : false,
+      minify: minify
+        ? {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+          }
+        : false
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.join(__dirname, "static", "assets", "*"),
+        to: path.join(__dirname, "dist", "assets"),
+        flatten: true
+      }
+    ])
   ],
+  resolve: {
+    alias: {
+      "@Component": path.resolve(__dirname, "src/components/"),
+      "@API$": path.resolve(__dirname, "src/helpers/API.js"),
+      "@Config$": path.resolve(__dirname, "src/config.js"),
+      "@View": path.resolve(__dirname, "src/views/"),
+      "@ViewStyle": path.resolve(__dirname, "src/scss/views/"),
+      "@ComponentStyle": path.resolve(__dirname, "src/scss/components/"),
+      "@DataStore": path.resolve(__dirname, "src/datastore/")
+    }
+  }
 };
-
-if (env !== 'development') {
-  config.plugins.push(new MiniCssExtractPlugin());
-
-  const cssLoader = config.module.rules.find(({ test }) => test.test('.css'));
-  // Replace the `vue-style-loader` with
-  // the MiniCssExtractPlugin loader.
-  cssLoader.use[0] = MiniCssExtractPlugin.loader;
-}
 
 if (minify) {
   config.optimization.minimizer = [
-    new OptimizeCSSAssetsPlugin(),
     new UglifyJsPlugin({
       cache: true,
-      parallel: true,
-    }),
+      parallel: true
+    })
   ];
 }
 

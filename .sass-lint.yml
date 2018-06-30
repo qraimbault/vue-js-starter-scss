@@ -1,5 +1,5 @@
 options:
-  formatter: stylish
+  formatter: prettier
 files:
   include: '**/*.s+(a|c)ss'
 rules:
@@ -9,7 +9,7 @@ rules:
   placeholder-in-extend: 1
 
   # Mixins
-  mixins-before-declarations: 1
+  mixins-before-declarations: 0
 
   # Line Spacing
   one-declaration-per-line: 1
@@ -36,7 +36,7 @@ rules:
   no-qualifying-elements: 1
   no-trailing-whitespace: 1
   no-trailing-zero: 1
-  no-transition-all: 1
+  no-transition-all: 0
   no-universal-selectors: 0
   no-url-domains: 1
   no-url-protocols: 1
@@ -73,7 +73,7 @@ rules:
   leading-zero: 1
   max-line-length: 0
   max-file-line-count: 0
-  nesting-depth: 1
+  nesting-depth: 0
   property-sort-order: 1
   pseudo-element: 1
   quotes: 1
