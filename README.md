@@ -43,7 +43,7 @@ Application configuration is located in `src/config.js`.
 
 Build can be configured in `webpack.config.js`, like the dev server host and port.
 
-```json
+```js
 serve: {
   host: "localhost",
   port: 3000
@@ -58,7 +58,7 @@ ESLint can be configured in `.eslintrc.js`.
 
 Routes are listed in `src/router/index.js` and should contain a meta node with a title, it will be displayed as the document.title, concatened with the separator and the site name in application config.
 
-```json
+```js
 {
   "path": "/",
   "name": "Home",
