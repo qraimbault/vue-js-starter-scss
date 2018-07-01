@@ -1,8 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-import Index from "@View/Index.vue";
 import { SiteName, TitleSeparator } from "@Config";
+
+import Index from "@View/Index.vue";
 
 Vue.use(Router);
 

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const env = "development";
+const env = process.env.NODE_ENV;
 const sourceMap = env === "development";
 const minify = env === "production";
 
@@ -14,6 +14,10 @@ const config = {
   mode: env,
   output: {
     publicPath: ""
+  },
+  serve: {
+    host: "localhost",
+    port: 3000
   },
   optimization: {
     splitChunks: {
@@ -43,7 +47,7 @@ const config = {
           {
             loader: "url-loader",
             options: {
-              limit: 1, // Convert images < 8kb to base64 strings
+              limit: 1,
               name: "images/[hash]-[name].[ext]"
             }
           }
@@ -86,13 +90,12 @@ const config = {
   ],
   resolve: {
     alias: {
-      "@Component": path.resolve(__dirname, "src/components/"),
       "@API$": path.resolve(__dirname, "src/helpers/API.js"),
       "@Config$": path.resolve(__dirname, "src/config.js"),
+      "@Component": path.resolve(__dirname, "src/components/"),
       "@View": path.resolve(__dirname, "src/views/"),
       "@ViewStyle": path.resolve(__dirname, "src/scss/views/"),
-      "@ComponentStyle": path.resolve(__dirname, "src/scss/components/"),
-      "@DataStore": path.resolve(__dirname, "src/datastore/")
+      "@ComponentStyle": path.resolve(__dirname, "src/scss/components/")
     }
   }
 };

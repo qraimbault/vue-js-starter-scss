@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ["vue"],
-  extends: ["plugin:vue/essential", "prettier"],
+  extends: ["plugin:vue/recommended", "prettier"],
   rules: {
     "object-shorthand": "error"
   }
