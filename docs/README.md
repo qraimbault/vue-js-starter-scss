@@ -20,6 +20,8 @@
 
 A lightweight Vue.js starter.  
 
+**YOU CAN READ THIS DOC IN A MORE FRIENDLY WAY [HERE](https://qraimbault.github.io/vue-js-starter-scss/#/).**  
+
 - [Vue.JS Starter](#vuejs-starter)
   - [Summary](#summary)
   - [Built-in modules](#built-in-modules)
