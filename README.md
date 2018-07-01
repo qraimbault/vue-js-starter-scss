@@ -30,6 +30,7 @@ A lightweight Vue.js starter.
 - [SASS](http://sass-lang.com/)
 - [ESLint](http://eslint.org/)
 - [SASSLint](https://github.com/sasstools/sass-lint)
+- [Jest](http://jestjs.io/) with [vue-test-utils](https://vue-test-utils.vuejs.org/)
 
 You can find documentation and informations about each modules by following the above links.
 
@@ -159,6 +160,10 @@ Or to get a component from a view:
 ```js
 import Articles from "@Component/Index/Articles.vue";
 ```
+
+## Unit Testing
+
+Unit testing is handled using Jest, you can find an example in `src/components/Index/__tests__`. They are run in the CI build system, using Travis-CI.
 
 ## License
 
