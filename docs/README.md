@@ -26,6 +26,7 @@ A lightweight Vue.js starter.
   - [Usage](#usage)
   - [Configuration](#configuration)
   - [Routing](#routing)
+  - [Generator](#generator)
   - [API](#api)
   - [Vuex](#vuex)
   - [Style](#style)
@@ -96,6 +97,10 @@ Routes are listed in `src/router/index.js` and should contain a meta node with a
   }
 }
 ```
+
+## Generator
+
+I created a generator using Yeoman, it can generate view, styles and tests. You can find it [here](https://github.com/QRaimbault/generator-qraimbault-vuejs) with installation and usage instructions.
 
 ## API
 
@@ -190,6 +195,7 @@ Webpack allows to put some aliases in the webpack config, so you can have shorte
 - `@View` pointing to `src/views`
 - `@MasterStyle` pointing to `src/scss/master.scss`
 - `@Asset` pointing to `src/assets`
+- `@Test` pointing to `__test__`
 - `@` pointing to `src`
 
 An example usage of these aliases is to get the API helper from a view/component:

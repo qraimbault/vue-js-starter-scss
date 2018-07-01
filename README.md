@@ -28,6 +28,7 @@ A lightweight Vue.js starter.
   - [Usage](#usage)
   - [Configuration](#configuration)
   - [Routing](#routing)
+  - [Generator](#generator)
   - [API](#api)
   - [Vuex](#vuex)
   - [Style](#style)
@@ -98,6 +99,10 @@ Routes are listed in `src/router/index.js` and should contain a meta node with a
   }
 }
 ```
+
+## Generator
+
+I created a generator using Yeoman, it can generate view, styles and tests. You can find it [here](https://github.com/QRaimbault/generator-qraimbault-vuejs) with installation and usage instructions.
 
 ## API
 
