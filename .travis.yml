@@ -11,4 +11,5 @@ before_install:
   - sh -e /etc/init.d/xvfb start
 script:
   - yarn install
-  - yarn lint
+  - yarn lint-js
+  - yarn lint-scss
