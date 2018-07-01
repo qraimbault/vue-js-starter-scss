@@ -16,7 +16,25 @@
   <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
 </p>
 
-A lightweight Vue.js starter.
+## Summary
+
+A lightweight Vue.js starter.  
+
+- [Vue.JS Starter](#vuejs-starter)
+  - [Summary](#summary)
+  - [Built-in modules](#built-in-modules)
+  - [Usage](#usage)
+  - [Configuration](#configuration)
+  - [Routing](#routing)
+  - [API](#api)
+  - [Vuex](#vuex)
+  - [Style](#style)
+  - [Single file components](#single-file-components)
+    - [Views](#views)
+    - [Components](#components)
+  - [Webpack Aliases](#webpack-aliases)
+  - [Unit Testing](#unit-testing)
+  - [License](#license)
 
 ## Built-in modules
 
@@ -126,7 +144,7 @@ You should import styles in the `<script>` tag in each component.
 
 You can also put style in the `<style>` tag in each component, scoped or not, the style injection works the same way using scss files or `<style>` tag.
 
-## Single file component
+## Single file components
 
 This starter uses [Single File Components](https://vuejs.org/v2/guide/single-file-components.html) structure, which is more suitable for large project but doesn't make it harder for small apps.
 
