@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils'
-import Articles from 'Articles.vue';
+import Articles from './Articles.vue';
 
 describe('Articles.vue', () => {
   const articles = [
