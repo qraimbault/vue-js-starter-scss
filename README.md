@@ -29,6 +29,9 @@ A lightweight Vue.js starter.
   - [API](#api)
   - [Vuex](#vuex)
   - [Style](#style)
+  - [Assets](#assets)
+    - [Imported assets](#imported-assets)
+    - [Static assets](#static-assets)
   - [Single file components](#single-file-components)
     - [Views](#views)
     - [Components](#components)
@@ -144,6 +147,32 @@ You should import styles in the `<script>` tag in each component.
 
 You can also put style in the `<style>` tag in each component, scoped or not, the style injection works the same way using scss files or `<style>` tag.
 
+## Assets
+
+### Imported assets
+
+Assets (images, fonts...) used directly in views (Like logo... etc) should be placed in src/assets (`@Asset`) and imported like a JavaScript module and used like a variable. Example:
+
+```js
+import logo from "@/images/logo.png";
+```
+
+You can also import it in scss using webpack resolved path or relative path as usual. Example:
+
+```scss
+.bg-image {
+  background-image: url('@Asset/images/background.png');
+}
+// OR
+.bg-image {
+  background-image: url('../../assets/images/background.png');
+}
+```
+
+### Static assets
+
+Assets used directyle in `static/index.html` like favicon for example should be placed in `static/assets` and will be copied on build in the `dist/assets` directory.
+
 ## Single file components
 
 This starter uses [Single File Components](https://vuejs.org/v2/guide/single-file-components.html) structure, which is more suitable for large project but doesn't make it harder for small apps.
@@ -166,6 +195,8 @@ Webpack allows to put some aliases in the webpack config, so you can have shorte
 - `@ComponentStyle` pointing to `src/scss/components`
 - `@View` pointing to `src/views`
 - `@ViewStyle` pointing to `src/scss/views`
+- `@Asset` pointing to `src/assets`
+- `@` pointing to `src`
 
 An example usage of these aliases is to get the API helper from a view/component:
 

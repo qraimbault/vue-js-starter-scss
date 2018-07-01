@@ -96,6 +96,7 @@ const config = {
       "@View": path.resolve(__dirname, "src/views/"),
       "@ViewStyle": path.resolve(__dirname, "src/scss/views/"),
       "@ComponentStyle": path.resolve(__dirname, "src/scss/components/"),
+      "@Asset": path.resolve(__dirname, "src/assets/"),
       "@": path.resolve(__dirname, "src/"),
     }
   }

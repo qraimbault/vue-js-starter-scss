@@ -9,6 +9,7 @@
       "@View/*": ["src/views/*"],
       "@ViewStyle/*": ["src/scss/views/*"],
       "@ComponentStyle/*": ["src/scss/components/*"],
+      "@Asset/*": ["src/assets/*"],
       "@/*": ["src/*"]
     }
   }
