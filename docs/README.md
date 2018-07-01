@@ -206,7 +206,9 @@ import Articles from "@Component/Index/Articles.vue";
 
 ## Unit Testing
 
-Unit testing is handled using Jest, you can find an example in `src/components/Index/__tests__`. They are run in the CI build system, using Travis-CI.
+Unit testing is handled using Jest, you can find an example in `src/components/Index/Articles.spec.js`. They are run in the CI build system, using Travis-CI.
+
+You can place your stubs/mocks in `__test__` (`@Test`) directory when they are project-wide tests assets.
 
 ## License
 

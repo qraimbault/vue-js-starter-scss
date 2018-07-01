@@ -192,6 +192,7 @@ Webpack allows to put some aliases in the webpack config, so you can have shorte
 - `@View` pointing to `src/views`
 - `@MasterStyle` pointing to `src/scss/master.scss`
 - `@Asset` pointing to `src/assets`
+- `@Test` pointing to `__test__`
 - `@` pointing to `src`
 
 An example usage of these aliases is to get the API helper from a view/component:
@@ -208,7 +209,9 @@ import Articles from "@Component/Index/Articles.vue";
 
 ## Unit Testing
 
-Unit testing is handled using Jest, you can find an example in `src/components/Index/__tests__`. They are run in the CI build system, using Travis-CI.
+Unit testing is handled using Jest, you can find an example in `src/components/Index/Articles.spec.js`. They are run in the CI build system, using Travis-CI.
+
+You can place your stubs/mocks in `__test__` (`@Test`) directory when they are project-wide tests assets.
 
 ## License
 

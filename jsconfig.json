@@ -9,6 +9,7 @@
       "@View/*": ["src/views/*"],
       "@MasterStyle": ["src/scss/master.scss"],
       "@Asset/*": ["src/assets/*"],
+      "@Test/*": ["__test__/*"],
       "@/*": ["src/*"]
     }
   }
