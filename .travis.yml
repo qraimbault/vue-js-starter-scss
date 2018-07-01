@@ -14,3 +14,4 @@ script:
   - yarn lint-js
   - yarn lint-scss
   - yarn unit
+  - yarn build
