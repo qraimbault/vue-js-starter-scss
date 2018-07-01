@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+  nginx:
+    build: ./docker
+    ports:
+      - "12000:80"
+    environment:
+      NODE_ENV: "production"
+    volumes:
+      - ./logs/nginx/:/var/log/nginx
+      - ./dist:/var/www/vue

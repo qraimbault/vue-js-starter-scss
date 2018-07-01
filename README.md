@@ -13,7 +13,9 @@
   <a href="https://www.travis-ci.org/QRaimbault/vue-js-starter-scss" rel="nofollow">
     <img src="https://www.travis-ci.org/QRaimbault/vue-js-starter-scss.svg?branch=master" alt="Build Status">
   </a>
-  <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
+  <a href="https://github.com/QRaimbault/vue-js-starter-scss/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
+  </a>
 </p>
 
 ## Summary
