@@ -135,7 +135,7 @@ The store is accessible from any component/view using `this.$store`.
 
 ## Style
 
-All you view/component specific styles should be placed in a file named exactly like the component, in the same directory.
+All you view/component specific styles should be placed in a file named exactly like the component, in the same directory.  
 You can place project-specific style in `src/scss` and import it from the component specific styles (see example in `src/components/Index).
 
 You should import styles in the `<script>` tag in each component.
