@@ -13,3 +13,4 @@ script:
   - yarn install
   - yarn lint-js
   - yarn lint-scss
+  - yarn unit

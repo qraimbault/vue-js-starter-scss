@@ -32,7 +32,19 @@
     "build": "cross-env NODE_ENV=production webpack",
     "serve": "cross-env NODE_ENV=production node bin/spa-server.js",
     "lint-js": "eslint --ext .js,.vue src",
-    "lint-scss": "sass-lint -c ./.sass-lint.yml"
+    "lint-scss": "sass-lint -c ./.sass-lint.yml",
+    "unit": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    }
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -45,7 +57,10 @@
     "@babel/core": "^7.0.0-beta.51",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.2.0",
     "babel-loader": "^8.0.0-beta",
+    "babel-preset-env": "^1.7.0",
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.11",
@@ -55,11 +70,12 @@
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
-    "karma": "^2.0.4",
+    "jest": "^23.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.0",
     "opn": "^5.3.0",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
+    "regenerator-runtime": "^0.12.0",
     "resolve-url-loader": "^2.3.0",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.0.3",
@@ -68,8 +84,10 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
     "vue-eslint-parser": "^2.0.3",
+    "vue-jest": "^2.6.0",
     "vue-loader": "^15.0.0-beta",
     "vue-template-compiler": "^2.5.16",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8",
     "webpack-serve": "^1.0.4"
