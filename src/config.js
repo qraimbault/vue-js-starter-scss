@@ -1,6 +1,8 @@
 // Used for the routes title
 export const SiteName = "Default Site Name";
 export const TitleSeparator = " - ";
+// Vue Router Mode config
+export const RouterMode = "hash";
 
 // Axios configuration
 export const APIConfig = {
