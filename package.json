@@ -14,7 +14,7 @@
     "url": "https://github.com/QRaimbault/vue-js-starter-scss/issues",
     "email": "quentin.raimbault@gmail.com"
   },
-  "homepage": "https://github.com/QRaimbault/vue-js-starter-scss#readme",
+  "homepage": "https://qraimbault.github.io/vue-js-starter-scss/#/",
   "keywords": [
     "vue",
     "vuejs",
@@ -25,7 +25,9 @@
     "scss",
     "vue-router",
     "vuejs2",
-    "vue2"
+    "vue2",
+    "jest",
+    "scss-styles"
   ],
   "scripts": {
     "start": "cross-env NODE_ENV=development node bin/dev-server.js",
