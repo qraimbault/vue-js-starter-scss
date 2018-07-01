@@ -20,8 +20,6 @@
 
 A lightweight Vue.js starter.  
 
-**YOU CAN READ THIS DOC IN A MORE FRIENDLY WAY [HERE](https://qraimbault.github.io/vue-js-starter-scss/#/).**  
-
 - [Vue.JS Starter](#vuejs-starter)
   - [Summary](#summary)
   - [Built-in modules](#built-in-modules)
@@ -137,13 +135,8 @@ The store is accessible from any component/view using `this.$store`.
 
 ## Style
 
-All your style should be located in the `src/scss` directory.
-
-There is 3 sub-directories:
-
-- `global` for your reset, mixins, variables, functions.
-- `views` for your view specific styles.
-- `components` for your components specific styles.
+All you view/component specific styles should be placed in a file named exactly like the component, in the same directory.
+You can place project-specific style in `src/scss` and import it from the component specific styles (see example in `src/components/Index).
 
 You should import styles in the `<script>` tag in each component.
 
@@ -194,9 +187,8 @@ Webpack allows to put some aliases in the webpack config, so you can have shorte
 - `@API` pointing to `src/helpers/API.js`, so directly to the configured Axios instance
 - `@Config` pointing to `src/config.js`
 - `@Component` pointing to `src/components`
-- `@ComponentStyle` pointing to `src/scss/components`
 - `@View` pointing to `src/views`
-- `@ViewStyle` pointing to `src/scss/views`
+- `@MasterStyle` pointing to `src/scss/master.scss`
 - `@Asset` pointing to `src/assets`
 - `@` pointing to `src`
 

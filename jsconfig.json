@@ -7,8 +7,7 @@
       "@Config": ["src/config.js"],
       "@Component/*": ["src/components/*"],
       "@View/*": ["src/views/*"],
-      "@ViewStyle/*": ["src/scss/views/*"],
-      "@ComponentStyle/*": ["src/scss/components/*"],
+      "@MasterStyle": ["src/scss/master.scss"],
       "@Asset/*": ["src/assets/*"],
       "@/*": ["src/*"]
     }

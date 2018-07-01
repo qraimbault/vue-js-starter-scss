@@ -1,0 +1,11 @@
+@import "@MasterStyle";
+
+.list {
+  &__title {
+    color: $article-title-color;
+  }
+
+  &__content {
+    color: $article-content-color;
+  }
+}

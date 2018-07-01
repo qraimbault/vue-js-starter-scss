@@ -10,7 +10,7 @@ import api from "@API";
 
 import Articles from "@Component/Index/Articles.vue";
 
-import "@ViewStyle/Index.scss";
+import "./Index.scss";
 
 export default {
   name: "Index",

@@ -1,5 +1,5 @@
 import { shallow } from 'vue-test-utils'
-import Articles from '../Articles.vue';
+import Articles from 'Articles.vue';
 
 describe('Articles.vue', () => {
   const articles = [
@@ -9,7 +9,7 @@ describe('Articles.vue', () => {
     },
     {
       title: 'test2', 
-      body: 'test fz content'
+      body: 'test content'
     }];
   it('Displays Title', () => {
     const wrapper = shallow(Articles, {
