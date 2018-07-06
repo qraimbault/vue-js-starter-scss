@@ -18,8 +18,8 @@ export const APIConfig = {
   responseType: "json",
   headers: {
     Accept: "application/json",
-    "Content-Type": "application/json"
-  }
+    "Content-Type": "application/json",
+  },
 };
 
 /**
@@ -27,4 +27,4 @@ export const APIConfig = {
  */
 export const enableAnalytics = true;
 export const analyticsKey = "UA-XXX-X";
-export const disableAnalyticsInDebug = false;
+export const disableAnalyticsInDebug = true;

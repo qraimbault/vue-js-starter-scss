@@ -19,8 +19,8 @@ export default {
   props: {
     articles: {
       required: true,
-      type: Array
-    }
-  }
+      type: Array,
+    },
+  },
 };
 </script>

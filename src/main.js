@@ -9,7 +9,7 @@ import VuexStoreConfig from "./vuex/store";
 import {
   enableAnalytics,
   analyticsKey,
-  disableAnalyticsInDebug
+  disableAnalyticsInDebug,
 } from "./config";
 
 if (enableAnalytics) {
@@ -20,8 +20,8 @@ if (enableAnalytics) {
     debug: {
       enabled: process.env.NODE_ENV !== "production",
       sendHitTask:
-        process.env.NODE_ENV === "production" || !disableAnalyticsInDebug
-    }
+        process.env.NODE_ENV === "production" || !disableAnalyticsInDebug,
+    },
   });
 }
 
@@ -35,5 +35,5 @@ const store = new Vuex.Store(VuexStoreConfig);
 new Vue({
   render: h => h(App),
   router,
-  store
+  store,
 }).$mount("#app");

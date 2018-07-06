@@ -3,6 +3,7 @@ module.exports = {
   extends: ["plugin:vue/recommended", "prettier"],
   rules: {
     "object-shorthand": "error",
-    semi: ["error", "always"]
+    semi: ["error", "always"],
+    "comma-dangle": ["error", "always"],
   }
 };

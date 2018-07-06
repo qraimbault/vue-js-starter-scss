@@ -15,12 +15,12 @@ import "./Index.scss";
 export default {
   name: "Index",
   components: {
-    Articles
+    Articles,
   },
   data() {
     return {
       title: "Index page !",
-      articles: []
+      articles: [],
     };
   },
   created() {
@@ -32,6 +32,6 @@ export default {
       .catch(e => {
         console.error(e);
       });
-  }
+  },
 };
 </script>

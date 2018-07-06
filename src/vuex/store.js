@@ -6,7 +6,7 @@ const storeConfig = {
   state: {},
   mutations: {},
   actions: {},
-  strict: debug
+  strict: debug,
 };
 
 export default storeConfig;
