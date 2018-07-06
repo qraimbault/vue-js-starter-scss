@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { APIConfig, } from "@Config";
+import { APIConfig } from "@Config";
 
 const api = axios.create(APIConfig);
 

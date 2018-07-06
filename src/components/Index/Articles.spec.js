@@ -1,4 +1,4 @@
-import { shallow, } from 'vue-test-utils';
+import { shallow } from 'vue-test-utils';
 import Articles from './Articles.vue';
 
 describe('Articles.vue', () => {
@@ -14,7 +14,7 @@ describe('Articles.vue', () => {
   ];
   it('Displays all articles', () => {
     const wrapper = shallow(Articles, {
-      propsData: { articles, },
+      propsData: { articles },
     });
     expect(wrapper.findAll('li')).toHaveLength(articles.length);
   });

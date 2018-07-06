@@ -4,6 +4,6 @@ module.exports = {
   rules: {
     "object-shorthand": "error",
     semi: ["error", "always"],
-    "comma-dangle": ["error", "always"],
+    "comma-dangle": ["error", "only-multiline"]
   }
 };
