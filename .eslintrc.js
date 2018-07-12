@@ -4,8 +4,9 @@ module.exports = {
   rules: {
     'object-shorthand': 'error',
     semi: ['error', 'always'],
-    'comma-dangle': ['error', 'only-multiline'],
+    'comma-dangle': ['error', 'always-multiline'],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
-    'prefer-template': 'error'
-  }
+    'prefer-template': 'error',
+    'no-useless-concat': 'error',
+  },
 };
