@@ -8,5 +8,15 @@ module.exports = {
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'prefer-template': 'error',
     'no-useless-concat': 'error',
+    'no-unused-vars': 'error',
+    'no-undefined': 'error',
+    'no-undef-init': 'error',
+    'no-undef': 'error',
+  },
+  env: {
+    jest: true,
+    browser: true,
+    node: true,
+    es6: true,
   },
 };
