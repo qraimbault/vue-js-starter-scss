@@ -12,6 +12,14 @@ module.exports = {
     'no-undefined': 'error',
     'no-undef-init': 'error',
     'no-undef': 'error',
+    'no-const-assign': 'error',
+    'prefer-const': 'error',
+    'no-var': 'error',
+    'eol-last': ['error', 'always'],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: 'var', next: 'return' },
+    ],
   },
   env: {
     jest: true,
