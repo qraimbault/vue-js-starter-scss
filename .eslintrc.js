@@ -18,7 +18,17 @@ module.exports = {
     'eol-last': ['error', 'always'],
     'padding-line-between-statements': [
       'error',
-      { blankLine: 'always', prev: 'var', next: 'return' },
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: 'directive', next: '*' },
+      { blankLine: 'always', prev: '*', next: 'class' },
+      { blankLine: 'always', prev: '*', next: 'export' },
+      { blankLine: 'any', prev: 'export', next: 'export' },
+      { blankLine: 'always', prev: '*', next: 'const' },
+      { blankLine: 'any', prev: 'const', next: 'const' },
+      { blankLine: 'always', prev: '*', next: 'function' },
+      { blankLine: 'any', prev: 'const', next: 'function' },
+      { blankLine: 'always', prev: '*', next: 'if' },
+      { blankLine: 'any', prev: 'const', next: 'if' },
     ],
   },
   env: {

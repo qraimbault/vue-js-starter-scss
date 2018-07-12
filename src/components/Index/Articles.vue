@@ -22,5 +22,14 @@ export default {
       type: Array,
     },
   },
+  methods: {
+    test() {
+      if(true) {
+        test();
+
+        return;
+      }
+    },
+  },
 };
 </script>
