@@ -34,6 +34,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "serve": "cross-env NODE_ENV=production node bin/spa-server.js",
     "lint-js": "eslint --ext .js,.vue src",
+    "lint-js-fix": "eslint --ext .js,.vue src --fix",
     "lint-scss": "sass-lint -c ./.sass-lint.yml",
     "unit": "jest"
   },

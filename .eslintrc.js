@@ -1,9 +1,11 @@
 module.exports = {
-  plugins: ["vue"],
-  extends: ["plugin:vue/recommended", "prettier"],
+  plugins: ['vue'],
+  extends: ['plugin:vue/recommended', 'prettier'],
   rules: {
-    "object-shorthand": "error",
-    semi: ["error", "always"],
-    "comma-dangle": ["error", "only-multiline"]
+    'object-shorthand': 'error',
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'only-multiline'],
+    quotes: ['error', 'single', { allowTemplateLiterals: true }],
+    'prefer-template': 'error'
   }
 };

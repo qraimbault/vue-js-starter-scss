@@ -1,26 +1,26 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import VueCookie from "vue-cookie";
+import Vue from 'vue';
+import Vuex from 'vuex';
+import VueCookie from 'vue-cookie';
 
-import router from "./router";
-import App from "@Component/App/App.vue";
-import VuexStoreConfig from "./vuex/store";
+import router from './router';
+import App from '@Component/App/App.vue';
+import VuexStoreConfig from './vuex/store';
 
 import {
   enableAnalytics,
   analyticsKey,
   disableAnalyticsInDebug,
-} from "./config";
+} from './config';
 
 if (enableAnalytics) {
-  const VueAnalytics = require("vue-analytics").default;
+  const VueAnalytics = require('vue-analytics').default;
   Vue.use(VueAnalytics, {
     id: analyticsKey,
     router,
     debug: {
-      enabled: process.env.NODE_ENV !== "production",
+      enabled: process.env.NODE_ENV !== 'production',
       sendHitTask:
-        process.env.NODE_ENV === "production" || !disableAnalyticsInDebug,
+        process.env.NODE_ENV === 'production' || !disableAnalyticsInDebug,
     },
   });
 }
@@ -36,4 +36,4 @@ new Vue({
   render: h => h(App),
   router,
   store,
-}).$mount("#app");
+}).$mount('#app');

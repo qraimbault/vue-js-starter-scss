@@ -16,10 +16,10 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
-      title: "Welcome to my starter !",
+      title: 'Welcome to my starter !',
     };
   },
 };

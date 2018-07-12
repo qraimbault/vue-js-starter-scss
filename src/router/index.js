@@ -1,9 +1,9 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue';
+import Router from 'vue-router';
 
-import { SiteName, TitleSeparator, RouterMode } from "@Config";
+import { SiteName, TitleSeparator, RouterMode } from '@Config';
 
-import Index from "@View/Index.vue";
+import Index from '@View/Index.vue';
 
 Vue.use(Router);
 
@@ -11,11 +11,11 @@ const router = new Router({
   mode: RouterMode,
   routes: [
     {
-      path: "/",
-      name: "Home",
+      path: '/',
+      name: 'Home',
       component: Index,
       meta: {
-        title: "Accueil",
+        title: 'Accueil',
       },
     },
   ],

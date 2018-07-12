@@ -12,10 +12,10 @@
 </template>
 
 <script>
-import "./Articles.scss";
+import './Articles.scss';
 
 export default {
-  name: "Articles",
+  name: 'Articles',
   props: {
     articles: {
       required: true,

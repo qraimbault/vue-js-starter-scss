@@ -6,20 +6,20 @@
 </template>
 
 <script>
-import api from "@API";
+import api from '@API';
 
-import Articles from "@Component/Index/Articles.vue";
+import Articles from '@Component/Index/Articles.vue';
 
-import "./Index.scss";
+import './Index.scss';
 
 export default {
-  name: "Index",
+  name: 'Index',
   components: {
     Articles,
   },
   data() {
     return {
-      title: "Index page !",
+      title: 'Index page !',
       articles: [],
     };
   },
