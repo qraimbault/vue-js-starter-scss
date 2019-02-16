@@ -9,7 +9,6 @@ module.exports = {
     'prefer-template': 'error',
     'no-useless-concat': 'error',
     'no-unused-vars': 'error',
-    'no-undefined': 'error',
     'no-undef-init': 'error',
     'no-undef': 'error',
     'no-const-assign': 'error',
