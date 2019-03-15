@@ -10,8 +10,8 @@
   <a href="https://github.com/vuejs/vue">
     <img src="https://img.shields.io/badge/vue-2.5.16-brightgreen.svg" alt="vue">
   </a>
-  <a href="https://www.travis-ci.org/QRaimbault/vue-js-starter-scss" rel="nofollow">
-    <img src="https://www.travis-ci.org/QRaimbault/vue-js-starter-scss.svg?branch=master" alt="Build Status">
+  <a href="https://www.travis-ci.org/qraimbault/vue-js-starter-scss" rel="nofollow">
+    <img src="https://www.travis-ci.org/qraimbault/vue-js-starter-scss.svg?branch=master" alt="Build Status">
   </a>
   <a href="https://github.com/QRaimbault/vue-js-starter-scss/blob/master/LICENSE">
     <img src="https://img.shields.io/npm/l/vue.svg" alt="License">
