@@ -1,4 +1,4 @@
-import { shallow } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import Articles from './Articles.vue';
 
 describe('Articles.vue', () => {
@@ -13,7 +13,7 @@ describe('Articles.vue', () => {
     },
   ];
   it('Displays all articles', () => {
-    const wrapper = shallow(Articles, {
+    const wrapper = shallowMount(Articles, {
       propsData: { articles },
     });
     expect(wrapper.findAll('li')).toHaveLength(articles.length);

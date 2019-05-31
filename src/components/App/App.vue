@@ -1,11 +1,15 @@
 <template>
   <div class="app">
     <header>
-      <h1 class="title">{{ title }}</h1>
+      <h1 class="title">
+        {{ title }}
+      </h1>
       <nav>
         <ul>
           <li>
-            <router-link :to="{name: 'Home' }">Home</router-link>
+            <router-link :to="{name: 'Home' }">
+              Home
+            </router-link>
           </li>
         </ul>
       </nav>

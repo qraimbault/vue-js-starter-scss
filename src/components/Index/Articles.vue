@@ -3,9 +3,14 @@
     <ul class="list">
       <li 
         v-for="(article, index) in articles" 
-        :key="index">
-        <h2 class="list__title">{{ article.title }}</h2>
-        <p class="list__content">{{ article.body }}</p>
+        :key="index"
+      >
+        <h2 class="list__title">
+          {{ article.title }}
+        </h2>
+        <p class="list__content">
+          {{ article.body }}
+        </p>
       </li>
     </ul>
   </div>

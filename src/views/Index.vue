@@ -1,6 +1,8 @@
 <template>
   <div class="page-content">
-    <h2 class="page-title">{{ title }}</h2>
+    <h2 class="page-title">
+      {{ title }}
+    </h2>
     <articles :articles="articles" />
   </div>
 </template>
