@@ -3,7 +3,7 @@ sudo: required
 os:
   - linux
 node_js:
-  - "9.11.2"
+  - '8.10.0'
 
 before_install:
   - export CHROME_BIN=chromium-browser
