@@ -13,32 +13,32 @@ const config = {
   entry: path.join(__dirname, 'src', 'main.js'),
   mode: env,
   output: {
-    publicPath: '',
+    publicPath: ''
   },
   serve: {
     host: 'localhost',
-    port: 3000,
+    port: 3000
   },
   optimization: {
     splitChunks: {
-      chunks: 'all',
-    },
+      chunks: 'all'
+    }
   },
   devtool: sourceMap ? 'cheap-module-eval-source-map' : undefined,
   module: {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [path.join(__dirname, 'src')],
+        include: [path.join(__dirname, 'src')]
       },
       {
         test: /\.scss$/,
-        loader: 'vue-style-loader!css-loader!resolve-url-loader!sass-loader?sourcemap',
+        loader: 'vue-style-loader!css-loader!resolve-url-loader!sass-loader'
       },
       {
         test: /\.(png|jp(e*)g|svg|ico)$/,
@@ -47,10 +47,10 @@ const config = {
             loader: 'url-loader',
             options: {
               limit: 1,
-              name: 'images/[hash]-[name].[ext]',
-            },
-          },
-        ],
+              name: 'images/[hash]-[name].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -58,12 +58,12 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              name: 'fonts/[name].[ext]',
-            },
-          },
-        ],
-      },
-    ],
+              name: 'fonts/[name].[ext]'
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new VueLoaderPlugin(),
@@ -75,17 +75,17 @@ const config = {
         ? {
             removeComments: true,
             collapseWhitespace: true,
-            removeAttributeQuotes: true,
+            removeAttributeQuotes: true
           }
-        : false,
+        : false
     }),
     new CopyWebpackPlugin([
       {
         from: path.join(__dirname, 'static', 'assets', '*'),
         to: path.join(__dirname, 'dist', 'assets'),
-        flatten: true,
-      },
-    ]),
+        flatten: true
+      }
+    ])
   ],
   resolve: {
     alias: {
@@ -96,17 +96,17 @@ const config = {
       '@MasterStyle$': path.resolve(__dirname, 'src/scss/master.scss'),
       '@Asset': path.resolve(__dirname, 'src/assets/'),
       '@Test': path.resolve(__dirname, '__test__'),
-      '@': path.resolve(__dirname, 'src/'),
-    },
-  },
+      '@': path.resolve(__dirname, 'src/')
+    }
+  }
 };
 
 if (minify) {
   config.optimization.minimizer = [
     new UglifyJsPlugin({
       cache: true,
-      parallel: true,
-    }),
+      parallel: true
+    })
   ];
 }
 
