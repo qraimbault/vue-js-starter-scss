@@ -70,7 +70,7 @@
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "copy-webpack-plugin": "^5.0.4",
-    "cross-env": "^5.2.0",
+    "cross-env": "^7.0.0",
     "css-loader": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.10.0",
