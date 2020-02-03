@@ -80,7 +80,7 @@
     "file-loader": "^5.0.2",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^25.1.0",
-    "mini-css-extract-plugin": "^0.8.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "open": "^7.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
