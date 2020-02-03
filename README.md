@@ -10,6 +10,9 @@
   <a href="https://github.com/vuejs/vue">
     <img src="https://img.shields.io/badge/vue-2.6.11-brightgreen.svg" alt="vue">
   </a>
+  <a href="https://github.com/qraimbault/vue-js-starter-scss/releases">
+    <img src="hhttps://img.shields.io/github/v/release/qraimbault/vue-js-starter-scss.svg" alt="version">
+  </a>
   <a href="https://www.travis-ci.org/qraimbault/vue-js-starter-scss" rel="nofollow">
     <img src="https://www.travis-ci.org/qraimbault/vue-js-starter-scss.svg?branch=master" alt="Build Status">
   </a>
