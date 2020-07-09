@@ -87,6 +87,9 @@ const config = {
           flatten: true,
         },
       ],
+      options: {
+        concurrency: 100,
+      },
     }),
   ],
   resolve: {
