@@ -53,7 +53,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "vue": "^2.6.11",
     "vue-analytics": "^5.22.1",
     "vue-cookie": "^1.1.4",
