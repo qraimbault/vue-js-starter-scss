@@ -92,7 +92,7 @@
     "sugarss": "^2.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
-    "vue-eslint-parser": "^7.1.0",
+    "vue-eslint-parser": "^7.4.1",
     "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.3",
     "vue-template-compiler": "^2.6.11",
